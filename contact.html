@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Infinytum</title>
+    <link rel="stylesheet" href="./posts.css">
+</head>
+<body> 
+    <header id="post-header">
+        <img src="./infinytum.png" alt="Infinytum logo" width="100px">
+        <div class="logoname">
+            <h1>Welcome to <span id="name">Infinytum</span></h1>
+            <p id="tagline">Endless thoughts. Infinite connections.</p>
+        </div>
+        <div class="nav">
+            <label class="hide" for="menu">☰ Menu</label>
+            <input type="checkbox" id="menu">
+            <nav>
+                <ul>
+                    <li><a href="./home.html">Home</a></li>
+                    <li><a href="./posts.html">Posts</a></li>
+                    <li><a class="active-page" href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <button class="back"><a href="#post-header">Top ↑</a></button>
+    </header>
+    <main>
+        <form class="form">
+        <fieldset class="fields">
+            <legend>Fill in your contact information below</legend>
+            <br>
+            <p>
+                <label for="Name">Fullname: </label>
+                <input type="text" name="name" id="Name" required>
+            </p>
+            <p>
+                <label for="email">Email address: </label>
+                <input type="email" name="email" id="email"required>
+            </p>
+            <p>
+                <label for="phone">Phone: </label>
+                <input type="text" name="" id="phone" required>
+            </p>
+            <p>
+                <label for="date">Date:</label>
+                <input type="date" id="date" required placeholder="01-02-2025">
+            </p>
+            <p>
+                <input type="checkbox" id="send">
+                <label for="send">Confirm to send</label>
+            </p>
+            <p class="errormsg" id="formError" role="alert"></p>
+            <button disabled type="submit" id="submit-btn">Send in</button>
+
+        </fieldset>
+        </form>
+    </main>
+    <footer>
+        <section id="contact">
+            <h3>Contact</h3>
+            <p> <strong>Email:</strong>  support@infinytumtech.org</p>
+            <p><strong>Phone:</strong> +46 (0)8 123 456</p>
+            <p><strong>Org.nr:</strong> 123456-7890</p>
+            <p><strong>Address: </strong>Nymånegatan 12, 111 22 Stockholm, Sverige</p>
+        </section>
+    </footer> 
+</body>
+<script src="./formValidation.js"></script>
+</html>

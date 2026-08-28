@@ -1,0 +1,231 @@
+*, 
+::before,
+::after{
+    box-sizing: border-box;
+}
+/*General settings*/
+*{
+    border: none;
+    border-radius: .8rem;
+}
+html, body{
+    font-size: 15px;
+    font-family: 'Bush', Times, serif;
+    background-color: #084707;
+    color: #a1f3b1;
+    padding: .5rem;
+}
+
+#homepage{
+    background-image: url(infinytum.png);
+    background-size: cover;
+
+    display: grid;
+    grid-template-areas: 
+    'header'
+    'main';
+}
+
+a{
+    color: #4d024d;
+    border-radius: non;
+    text-decoration: none;
+}
+nav a:hover{
+    background-color: #ffbc90;
+    border:none;
+    border-radius: .2rem;
+    text-decoration: underline;
+}
+
+/*FOR THE HOMEPAGE HEADER*/
+.active-page{
+    font-weight: bolder;
+    background-color: #520352;
+    color: #0ff448;;
+    border-radius: .2rem;
+    padding: .4rem;
+}
+#home-header{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0e7d2aa6;
+}
+
+#home-header img, .post-header img{
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+#name, #tagline{
+    color: #46ea14;
+    font-style: italic;
+    font-weight: bolder;
+    text-shadow: .2rem .1rem .1rem #08802a;
+}
+
+#home-nav ul{
+    list-style: none;
+    display: flex;
+    gap: 5rem;
+    width: fit-content;
+    margin: 0 2rem;
+    padding: .5rem;
+
+    font-size: 1rem;
+    background-color: #3ab258;
+}
+/*HOMEPAGE MAIN*/
+#home-main{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-areas: 
+    'welcome'
+    'description'
+    'contact';
+    gap: 1rem;
+    padding: 0rem 5rem;
+    background-color: #055a1ad6;
+    text-align: center;
+}
+.content{
+    background-color: #047d0cb1;
+
+}
+#welcome{
+    grid-area: welcome;
+    font-size: x-large;
+    font-weight: bolder;
+    text-shadow: .1rem .1rem .1rem #0cff51;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+#home-main h1, #home-main p{
+    margin: 0;
+}
+#home-main h1{
+    font-size: 2.5rem;
+}
+#welcome #name{
+    font-size: 6rem;
+    text-shadow: .1rem .1rem .1rem #ffffff;
+}
+#welcome #tagline{
+    font-size: 1.5rem;
+    text-shadow: .05rem .03rem .05rem #c8e2c8;
+}
+#description{
+    grid-area: description;
+    font-size: 1.3rem;
+    font-weight: normal;
+    text-align: center;
+    text-shadow: .05rem .05rem .05rem #2a5014;
+}
+#description p{
+    padding: 1rem 5rem;
+}
+#description button{
+    background-color: #145618;
+    font-size: larger;
+    font-weight: bolder;
+    text-shadow: .1rem .1rem .1rem #409211;
+    transition: all 0.3s ease;
+    margin: 2rem;
+}
+
+#description button:hover{
+    transform: translateY(-0.3rem);
+    background-color: rgb(0, 255, 0);
+    text-decoration: none;
+    color: #5bec53;
+}
+
+#contact{
+    grid-area: contact;
+    padding-bottom: 1rem;
+    font-size: large;
+    font-weight: normal;
+    text-shadow: .05rem .1rem .05rem #409211;
+    margin-bottom: 1.5rem;
+}
+
+strong{
+    font-style: italic;
+}
+
+/*MEDIA QUERIES*/
+@media (max-width: 770px) {
+    #homepage{
+        background-size: contain;
+    }
+    /* HEADER */
+    #home-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    #home-header img {
+        margin: 0.5rem auto;
+        width: 120px; /* smaller logo/avatar */
+    }
+
+    #name, #tagline {
+        font-size: 1.5rem;
+        text-shadow: .1rem .05rem .05rem #08802a;
+    }
+
+    /* NAVIGATION */
+    #home-nav ul {
+        gap: 3rem;
+        align-items: center;
+        margin: 1rem auto;
+        font-size: 1.2rem;
+        width: 100%;
+        background-color: #3ab258;
+    }
+
+    /* MAIN SECTION */
+    #home-main {
+        padding: 1rem 2rem;
+    }
+
+    #welcome {
+        font-size: large;
+        margin-top: 1rem;
+    }
+
+    #welcome #name {
+        font-size: 4rem;
+    }
+    #welcome #tagline{
+        font-size: 1rem;
+    }
+
+    #home-main h1 {
+        font-size: 2rem;
+    }
+
+    #description {
+        font-size: 1rem;
+    }
+
+    #description p {
+        padding: 1rem 2rem;
+    }
+
+    #description button {
+        font-size: 1rem;
+        margin: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    #contact {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+}
+
+
